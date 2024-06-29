@@ -1,24 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+// import Showdata from './Components/AggregatedTable';
 
+import { MantineProvider } from '@mantine/core';
+import AggregatedTable from './Components/AggregatedTable';
+import CropDataComponent from './Components/CropDataComponent';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <MantineProvider withGlobalStyles withNormalizeCSS>
+    <div style={{ padding: '20px' }}>
+      <h1>Aggregated Crop Data</h1>
+      <AggregatedTable />
+      <CropDataComponent/>
     </div>
+  </MantineProvider>
   );
 }
 
